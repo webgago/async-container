@@ -193,7 +193,7 @@ end</code></pre>
 	
 	@statistics.spawn!
 	
-	Fiber.new(blocking: true) do
+	fiber do
 		while @running
 			child = self.start(name, &amp;block)
 			
